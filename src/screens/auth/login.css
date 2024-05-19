@@ -4,22 +4,43 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    /* background-color: black; */
+    background-image: linear-gradient(41deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(9deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(124deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(253deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(270deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(64deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(347deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(313deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(90deg, rgb(10, 17, 72),rgb(35, 148, 228));
+}
+
+
+.login-card::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(135deg, rgba(19, 176, 223, 0.26) 0%, rgba(19, 176, 223, 0.26) 23%,rgba(16, 160, 197, 0.26) 23%, rgba(16, 160, 197, 0.26) 65%,rgba(13, 144, 172, 0.26) 65%, rgba(13, 144, 172, 0.26) 70%,rgba(9, 129, 146, 0.26) 70%, rgba(9, 129, 146, 0.26) 74%,rgba(6, 113, 121, 0.26) 74%, rgba(6, 113, 121, 0.26) 90%,rgba(3, 97, 95, 0.26) 90%, rgba(3, 97, 95, 0.26) 100%),linear-gradient(45deg, rgba(65, 234, 230, 0.26) 0%, rgba(65, 234, 230, 0.26) 28%,rgba(88, 192, 215, 0.26) 28%, rgba(88, 192, 215, 0.26) 55%,rgba(110, 150, 201, 0.26) 55%, rgba(110, 150, 201, 0.26) 66%,rgba(133, 107, 186, 0.26) 66%, rgba(133, 107, 186, 0.26) 80%,rgba(155, 65, 172, 0.26) 80%, rgba(155, 65, 172, 0.26) 85%,rgba(178, 23, 157, 0.26) 85%, rgba(178, 23, 157, 0.26) 100%),linear-gradient(90deg, rgb(27, 194, 246) 0%, rgb(27, 194, 246) 6%,rgb(39, 174, 237) 6%, rgb(39, 174, 237) 32%,rgb(50, 155, 229) 32%, rgb(50, 155, 229) 40%,rgb(62, 135, 220) 40%, rgb(62, 135, 220) 66%,rgb(74, 116, 211) 66%, rgb(74, 116, 211) 72%,rgb(86, 96, 202) 72%, rgb(86, 96, 202) 86%,rgb(97, 77, 194) 86%, rgb(97, 77, 194) 96%,rgb(109, 57, 185) 96%, rgb(109, 57, 185) 100%);
+    z-index: -999;
+    border-radius: 20px;
+    filter: blur(2px);
+    -moz-box-shadow: 0 0 3px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0 0 3px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 3px rgba(255, 255, 255, 1);
 }
 
 .login-card{
-    background-color: black;
+    position: relative;
+    height: calc(100vh - 30%);
+    width: calc(100vw - 30%);
     display: flex;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
     
 }
 
 .form-container{
-    width: 550px;
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
+    width: 50%;
 }
 
 .form-container input{
@@ -34,4 +55,68 @@
     font-size: 1.3rem;
     padding: 0.4rem 1rem;
     border-radius: 3rem;
+    margin-bottom: 2rem;
+}
+
+#toggle-section{
+    top: 0;
+    left: 0;
+    /* right: 0; */
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 2s ease;
+    /* padding: 0.2rem 0.2rem; */
+}
+
+#toggle-sectionp h3{
+    font-size: 20px;
+    
+}
+
+.animated-logo{
+    display: flex;
+}
+
+
+
+.music-bars{
+/* HTML: <div class="loader"></div> */
+    margin-right: 10px;
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background: 
+        var(--c) 0%   100%,
+        var(--c) 50%  100%,
+        var(--c) 100% 100%;
+    animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+    0%  {background-size: 20% 100%,20% 100%,20% 100%}
+    20% {background-size: 20% 60% ,20% 100%,20% 100%}
+    40% {background-size: 20% 80% ,20% 60% ,20% 100%}
+    60% {background-size: 20% 100%,20% 80% ,20% 60% }
+    80% {background-size: 20% 100%,20% 100%,20% 80% }
+    100%{background-size: 20% 100%,20% 100%,20% 100%}
+}
+
+@keyframes move-left {
+    0%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(50%);
+    }
+}
+
+#toggle-section-button{
+    cursor: pointer;
 }
